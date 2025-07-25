@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalSlides = 19;
     const imagePaths = [];
 
-    // Dynamically generate the image paths
+    // If images are in assets/projects/project2/Photo-slide/
     for (let i = 1; i <= totalSlides; i++) {
-        imagePaths.push(`Photo-slide/slide${i}.jpg`);
+        imagePaths.push(`project2/Photo-slide/slide${i}.jpg`);
     }
 
     imagePaths.forEach((path, index) => {
