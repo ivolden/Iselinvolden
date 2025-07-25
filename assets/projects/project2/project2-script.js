@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Dynamically generate the image paths
     for (let i = 1; i <= totalSlides; i++) {
-        imagePaths.push(`Photo-slide/slide${i}.jpg`);
+        imagePaths.push(`./Photo-slide/slide${i}.jpg`);
     }
 
     // Add images to the slideshow
