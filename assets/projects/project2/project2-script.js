@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalSlides = 19; // Updated total number of slides
     const imagePaths = [];
 
-    // Dynamically generate the image paths
+    // Correct path for images
     for (let i = 1; i <= totalSlides; i++) {
         imagePaths.push(`Photo-slide/slide${i}.jpg`);
     }
