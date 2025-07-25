@@ -1,0 +1,575 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d0d0d; /* Deep black background */
+    color: #e0e0e0; /* Light gray text */
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background: 
+        linear-gradient(to bottom, rgba(13, 13, 13, 0) 65%, rgba(13, 13, 13, 3)), /* Smooth gradient fade */
+        url('../images/header-pb.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    color: #ffffff; /* Ensures text is readable */
+    height: 100vh; /* Full height of the viewport */
+    padding: 60px 20px; /* Adds space inside the header */
+    text-align: center;
+    border-bottom: none; /* Remove the border to avoid any visible line */
+}
+
+/* Specific header styling for the About Me page */
+body.about-page header {
+    background: 
+        linear-gradient(to bottom, rgba(13, 13, 13, 0) 65%, rgba(13, 13, 13, 3)), /* Smooth gradient fade */
+        url('../images/header-pb-clear.jpg'); /* Path to the new image */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    color: #ffffff; /* Ensures text is readable */
+    height: 100vh; /* Full height of the viewport */
+    padding: 60px 20px; /* Adds space inside the header */
+    text-align: center;
+    border-bottom: none; /* Remove the border to avoid any visible line */
+}
+
+header h1 {
+    font-family: 'Nanum Myeongjo', serif; /* Apply the Nanum Myeongjo font */
+    font-size: 4rem; /* Adjust the size as needed */
+    font-weight: 700; /* Use bold weight */
+    color: #130821; /* Purple accent */
+    text-align: center; /* Centers the text horizontally */
+    margin-bottom: 20px; /* Adds spacing below the h1 */
+}
+
+/* Navigation Menu Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #1a1a1a; /* Dark color for menu links */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #333333; /* Slightly darker color on hover */
+}
+
+/* Main Section */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #dadada;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1a1a1a; /* Updated underline color */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+main p {
+    font-size: 1.2rem;
+    color: #b2bec3; /* Softer gray */
+    margin-bottom: 30px;
+}
+
+.project-card {
+    background-color: #1a1a1a; /* Updated card background */
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+.project-card h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #b2bec3;
+}
+
+.button {
+    display: inline-block;
+    background-color: #1a1a1a; /* Updated button background */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #1a1a1a; /* Updated hover background */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #121212;
+    color: #b2bec3;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333333;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #150e45;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 300px; /* Adjust for mobile devices */
+    }
+}
+
+#about-info h1 {
+    font-family: 'Nanum Myeongjo', serif; /* Keep the original font */
+    font-size: 4rem; /* Match the size */
+    font-weight: 700; /* Match the weight */
+    color: #dadada; /* Match the color */
+    text-align: center; /* Center the title */
+    margin-top: 20px; /* Adds space above the title */
+    margin-bottom: 20px; /* Adds space below the title */
+    position: relative; /* Allows positioning of the line */
+}
+
+#about-info h1::after {
+    content: ""; /* Adds an empty pseudo-element for the line */
+    display: block; /* Ensures the line appears as a block element */
+    width: 50%; /* Adjusts the width of the line (relative to the text) */
+    height: 2px; /* Thickness of the line */
+    background-color: #1a1a1a; /* Color of the line */
+    margin: 0 auto; /* Centers the line */
+    position: absolute; /* Positions the line relative to the title */
+    left: 0;
+    right: 0;
+}
+
+#about-info p {
+    font-size: 1.2rem; /* Adjust the font size if needed */
+    color: #b2bec3; /* Softer gray */
+    margin-bottom: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center; /* Centers the paragraph */
+}
+
+/* About Me Section Styling */
+#about-info {
+    display: flex; /* Enables Flexbox for layout */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Aligns the content vertically */
+    gap: 20px; /* Adds spacing between the text and image */
+    padding: 40px 20px; /* Adds padding around the section */
+    text-align: left; /* Aligns text to the left */
+}
+
+.about-container {
+    display: flex; /* Enables Flexbox for the container */
+    flex-direction: row; /* Aligns items in a row */
+    justify-content: space-between; /* Adds space between text and image */
+    align-items: center; /* Aligns items vertically */
+    max-width: 1200px; /* Limits the width of the content */
+    margin: 0 auto; /* Centers the container */
+}
+
+.about-text {
+    flex: 1; /* Allows the text to take up available space */
+    padding-right: 20px; /* Adds space between the text and the image */
+}
+
+.about-text h1 {
+    margin-bottom: 20px; /* Adds spacing below the title */
+    font-size: 2.5rem; /* Adjust the font size */
+    font-weight: 700;
+    color: #ffffff; /* Ensures the text is readable */
+}
+
+.about-text p {
+    font-size: 1.2rem; /* Adjust the font size */
+    color: #b2bec3; /* Softer gray */
+    line-height: 1.8; /* Improves readability */
+}
+
+.about-image {
+    flex: 0 0 300px; /* Fixes the width of the image container */
+    text-align: center; /* Centers the image inside the container */
+}
+
+.about-image img {
+    max-width: 100%; /* Ensures the image scales properly */
+    border-radius: 10px; /* Adds rounded corners to the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+/* Blog Section Styling */
+#blog-posts {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.blog-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: left;
+}
+
+/* Projects Section Styling */
+#projects {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-family: 'Nanum Myeongjo', serif; /* Keep the original font */
+    font-size: 2.5rem; /* Original size */
+    font-weight: 700; /* Original bold weight */
+    color: #dadada; /* Original white color */
+    text-align: center; /* Centers the title */
+    margin-top: 20px; /* Adds space above the title */
+    margin-bottom: 20px; /* Adds space below the title */
+}
+
+.project {
+    margin-bottom: 50px; /* Adds space between projects */
+    text-align: left;
+    max-width: 75%; /* Sets the width to 2/3 of the page */
+    margin: 0 auto; /* Centers the project content */
+}
+
+.project p {
+    font-size: 1.2rem; /* Default size for the project text */
+    color: #b2bec3;
+    line-height: 1.6; /* Default line spacing */
+    margin-bottom: 20px; /* Default spacing below the text */
+}
+
+.project-file {
+    width: 100%; /* Keeps the PDF window as wide as the text box */
+    height: 600px; /* Default height of the PDF window */
+    border: 1px solid #333333; /* Adds a border around the iframe */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+    margin-top: 15px; /* Default spacing above the PDF window */
+}
+
+.project-frame {
+    width: 100%; /* Set the iframe width to 90% of the page */
+    max-width: 1200px; /* Optional: Limit the maximum width */
+    height: 800px; /* Adjust the height as needed */
+    margin: 20px auto; /* Center the iframe horizontally */
+    display: block; /* Ensure the iframe is treated as a block element */
+    margin-bottom: 45px;
+    border: none;
+    overflow: none; /* Prevents overflow */
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #b2bec3;
+}
+
+
+/* Perspectives Section Styling */
+#perspectives {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#perspectives h2 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #dadada;
+    margin-bottom: 20px;
+}
+
+.perspectives-list {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.perspective-item {
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+    padding: 0 24px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.perspective-item h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #dadada;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perspective-item p {
+    font-size: 1.2rem;
+    color: #b2bec3;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#about-info h1,
+.projects h2,
+.perspectives h2 {
+    font-family: 'Nanum Myeongjo', serif; /* Match the font */
+    font-size: 4rem; /* Match the size */
+    font-weight: 700; /* Match the weight */
+    color: #dadada; /* Match the color */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+.project h3,
+.perspective h3 {
+    font-family: 'Nanum Myeongjo', serif; /* Match the font */
+    font-size: 4rem; /* Match the size */
+    font-weight: 700; /* Match the weight */
+    color: #dadada; /* Match the color */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%; /* Adjusts to the container width */
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slideshow-frame {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes up the full width */
+    height: auto; /* Adjusts dynamically to the image aspect ratio */
+    display: none; /* Hide all slides by default */
+}
+
+.slide.active {
+    display: block; /* Show the active slide */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Contact Page Styling */
+.contact-page header h1 {
+    font-family: 'Nanum Myeongjo', serif; /* Keep the font */
+    font-size: 3rem; /* Keep the size */
+    font-weight: 700; /* Keep the weight */
+    color: #1a1a1a; /* Set to the same dark color as other pages */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+#contact-form {
+    max-width: 90%; /* Make the form almost as wide as the page */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#contact-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #dadada;
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #b2bec3;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    width: 100%; /* Make them take up the full width of the form */
+    padding: 15px; /* Add more padding for better usability */
+    margin-bottom: 20px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form input[type="email"] {
+    width: 50%; /* Set the email input box to its previous size */
+    max-width: 600px; /* Optional: Limit the maximum width */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #2e2e2e; /* Revert to the previous background color */
+    color: #ffffff; /* Ensure text is readable */
+}
+
+#contact-form textarea {
+    width: 90%; /* Keep the message box as wide as the form */
+    max-width: 1200px; /* Optional: Limit the maximum width */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #2e2e2e; /* Revert to the previous background color */
+    color: #ffffff; /* Ensure text is readable */
+    resize: vertical; /* Allow vertical resizing only */
+    height: 150px; /* Set a default height */
+}
+
+#contact-form button {
+    width: 100%; /* Keep the button full width */
+    padding: 15px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #333333;
+}
+
+/* Shared styling for section titles */
+.section-title {
+    font-family: 'Nanum Myeongjo', serif; /* Use the same font */
+    font-size: 4rem; /* Match the font size */
+    font-weight: 700; /* Match the font weight */
+    color: #dadada; /* Match the color */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+.project-images {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    justify-content: center;
+}
+.project-images img {
+    max-width: 150px;
+    max-height: 120px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    object-fit: cover;
+}

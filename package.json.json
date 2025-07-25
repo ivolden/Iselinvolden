@@ -1,0 +1,22 @@
+{
+  "name": "project-portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio website showcasing projects with a dark theme and purple accents.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'"
+  },
+  "keywords": [
+    "portfolio",
+    "projects",
+    "website",
+    "dark theme"
+  ],
+  "author": "Iselin Volden",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
