@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalSlides = 19;
     const imagePaths = [];
 
-    // If images are in assets/projects/project2/Photo-slide/
+    // Correct path: photo-slide/slide1.jpg, etc. (all lowercase)
     for (let i = 1; i <= totalSlides; i++) {
-        imagePaths.push(`project2/Photo-slide/slide${i}.jpg`);
+        imagePaths.push('project2/photo-slide/slide' + i + '.jpg');
     }
 
     imagePaths.forEach((path, index) => {
