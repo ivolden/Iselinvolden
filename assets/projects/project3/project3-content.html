@@ -1,21 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Project 3</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css">
+    <link rel="stylesheet" href="../project2/project2-style.css">
+    <script src="project3-script.js" defer></script>
 </head>
 <body>
     <main>
         <section class="project">
             <h2>Project 3</h2>
             <p>I have lived in Ireland for almost two years and the humidity have defeated many of my posessions, multiple being paintings. To preserve some pieces i like before they mold over iv poorly scanned them and will share them with you here.</p>
-            <div class="project-images">
-                <img src="img_3021.jpg" alt="Project 3 image 1">
-                <img src="img_3022.jpg" alt="Project 3 image 2">
-                <img src="img_3023.jpg" alt="Project 3 image 3">
+            <div class="slideshow-container">
+                <div class="slideshow-frame" id="slideshow-frame">
+                    <!-- Images will be dynamically added here -->
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
-            <p><!-- Any additional details or text --></p>
         </section>
     </main>
 </body>

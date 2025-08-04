@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalSlides = 19;
     const imagePaths = [];
 
-    // Correct path: photo-slide/slide1.jpg, etc. (all lowercase)
+    // Images are in Photo-slide/ relative to this HTML file
     for (let i = 1; i <= totalSlides; i++) {
-        imagePaths.push('project2/photo-slide/slide' + i + '.jpg');
+        imagePaths.push('Photo-slide/slide' + i + '.jpg');
     }
 
     imagePaths.forEach((path, index) => {
@@ -16,4 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (index === 0) img.classList.add("active");
         slideshowFrame.appendChild(img);
     });
+
+    let currentSlide = 0;
+    const slides = () => document.querySelectorAll(".slide");
+
+    window.changeSlide = function(n) {
+        slides()[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + n + imagePaths.length) % imagePaths.length;
+        slides()[currentSlide].classList.add("active");
+    };
 });
