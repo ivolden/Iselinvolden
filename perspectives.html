@@ -31,7 +31,7 @@
     <main>
         <section id="perspectives">
             <h2 class="section-title">My Thoughts on Things</h2>
-            <div class="perspectives-list">
+            <div class="perspectives-list" id="perspectives-list">
                 <!-- Blog posts will be dynamically loaded here by scripts.js -->
                 <!-- Latest post at the top -->
                 <article class="perspective-item">
@@ -48,5 +48,40 @@
         <p>&copy; 2025 Iselin Volden</p>
     </footer>
     <script src="assets/js/scripts.js"></script>
+    <script>
+        // Automatically find and load all postN.html files in assets/blog/
+        const blogFolder = 'assets/blog/';
+        const maxPosts = 50; // Set a reasonable upper limit
+        const perspectivesList = document.getElementById('perspectives-list');
+        let posts = [];
+
+        // Try to fetch posts in descending order (latest first)
+        function tryLoadPost(n) {
+            fetch(`${blogFolder}post${n}.html`)
+                .then(response => {
+                    if (response.ok) return response.text();
+                    throw new Error('Not found');
+                })
+                .then(html => {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = html;
+                    // Find the article or main content
+                    let article = tempDiv.querySelector('.perspective-item');
+                    if (!article) article = tempDiv.querySelector('main, body, div');
+                    if (article) posts.push(article.outerHTML);
+                })
+                .catch(() => {})
+                .finally(() => {
+                    if (n > 1) {
+                        tryLoadPost(n - 1);
+                    } else {
+                        perspectivesList.innerHTML = posts.join('');
+                    }
+                });
+        }
+
+        // Start from the highest possible post number
+        tryLoadPost(maxPosts);
+    </script>
 </body>
 </html>
